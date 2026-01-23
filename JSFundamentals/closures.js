@@ -1,4 +1,5 @@
-// Closure means a function remembers variables from its outer scope even after the outer function has finished executing.
+// Closure means a function remembers variables from its outer scope even after 
+// the outer function has finished executing.
 
 // In simple words:
 // 👉 Inner function + outer function variables = closure
