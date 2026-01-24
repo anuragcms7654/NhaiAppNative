@@ -17,3 +17,8 @@ It’s important to understand this to avoid bugs related to undefined values or
 -- var is function scoped but let and const are block scoped.
 -- var is hoisted, and can be redeclared and updated, let is hoisted but not initialized, it is in temporal dead zone, also let cannot be redeclared in the same scope.
 -- const cannnot be redeclared and updated, also it is not hoisted.
+
+# Call, apply and bind
+-- call() invokes a function immediately with a specified this and arguments passed individually.
+-- apply() invokes a function immediately with a specified this and arguments passed as an array.
+-- bind() returns a new function with this (and optional arguments) permanently bound, to be executed later.
