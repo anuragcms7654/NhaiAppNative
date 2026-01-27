@@ -22,3 +22,11 @@ It’s important to understand this to avoid bugs related to undefined values or
 -- call() invokes a function immediately with a specified this and arguments passed individually.
 -- apply() invokes a function immediately with a specified this and arguments passed as an array.
 -- bind() returns a new function with this (and optional arguments) permanently bound, to be executed later.
+
+# Function composition
+-- Function composition is a technique where multiple functions are combined so that the output of one becomes the input of the next.
+
+# Difference between Object.freeze() and Object.seal()
+-- Object.freeze() - you cannot change its properties or add/remove properties.
+-- Object.seal() - you can modify existing properties but cannot add or delete properties.
+

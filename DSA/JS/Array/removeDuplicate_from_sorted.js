@@ -21,12 +21,13 @@ const obj = {}
 for (i of arr){
     if (!(i in obj)){
         obj[i] = 0
+        result.push(i)
     }
 }
 
-for (i in obj){
-    result.push(+i)
-}
+// for (i in obj){
+//     result.push(+i)
+// }
 
 console.log(result);
 

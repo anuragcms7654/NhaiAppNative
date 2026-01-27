@@ -1,11 +1,11 @@
-// function add(a) {
-//   return function (b) {
-//     return function (c) {
-//       return a + b + c;
-//     };
-//   };
-// }
-// add(1)(2)(3); // 6
+function add(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+add(1)(2)(3); // 6
 
 // const addArrow = (a) => (b) => (c) => a + b + c;
 // addArrow(1)(2)(3); // 6
