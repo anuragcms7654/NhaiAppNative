@@ -1,14 +1,13 @@
-const arr = [10, 1, 5, 9, 2, 11, 14];
+console.log([] + []); // "" empty string as []?.toString() gives "", and type coersion occurs
+console.log([] + {});
+console.log({} + []);
 
-for (let i = 0; i < arr.length; i++) {
-    let key = arr[i];
-    let j = i-1;
-    while (j >= 0 && arr[j] > key){
-      arr[j+1] = arr[j];
-      j-=1;
-    }
-    arr[j+1] = key;
-}
 
-console.log(arr);
+let a = {};
+let b = a;
+b.x = 10;
+console.log(a.x);
 
+setTimeout(() => console.log(1), 0);
+Promise.resolve().then(() => console.log(2));
+console.log(3);

@@ -30,3 +30,34 @@ It’s important to understand this to avoid bugs related to undefined values or
 -- Object.freeze() - you cannot change its properties or add/remove properties.
 -- Object.seal() - you can modify existing properties but cannot add or delete properties.
 
+# Difference between "require" and "import"
+-- In plain Node.js (no bundler), both require and import will load the full file from disk.
+-- So in React/React Native:
+----- require → pulls entire module, no tree shaking.
+----- import → allows tree shaking, smaller JS bundle, lighter APK / IPA in React Native.
+
+# Template Literals
+-- const str = "Line 1\nLine 2\nLine 3";
+-- with template literals - 
+const str = `Line 1
+Line 2
+Line 3`;
+
+# What is Destructuring?
+-- Destructuring is a syntax to extract values from arrays or objects and assign them to variables in a concise way.
+-- Object Destructuring
+const user = { name: "Alice", address: { city: "Delhi", pin: 110001 } };
+const { address: { city, pin } } = user;
+
+-- Array Destructuring
+const [x = 1, y = 2, z = 3, w = 4] = [10, 20];
+console.log(x, y, z, w); // 10 20 3 4
+// Rest pattern
+const [head, ...tail] = [1, 2, 3, 4];
+console.log(head); // 1
+console.log(tail); // [2, 3, 4]
+
+Swap variables using array destructuring
+let a = 1, b = 2;
+[a, b] = [b, a];
+console.log(a, b); // 2 1
