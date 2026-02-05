@@ -18,7 +18,7 @@ for (let i=0; i<arr.length; i++){
     if (obj.hasOwnProperty(remaining)){
        output.push([obj[remaining], i])
     }
-    obj[arr[i]] = i 
+    obj[arr[i]] = i;
 }
 
 console.log(obj);

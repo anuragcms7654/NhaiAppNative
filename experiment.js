@@ -1,15 +1,22 @@
-// console.log([] + []); // "" empty string as []?.toString() gives "", and type coersion occurs
-// console.log([] + {});
-// console.log({} + []);
+const arr = [7,6,5,4,9,1,3,4,0]
+const target = 10;
+const output = [];
+const obj = {}
+
+for (let i = 0; i < arr.length; i++){
+    let remaining = target - arr[i];
+    if (remaining in obj){
+        output.push([obj[remaining], i])
+    }
+    obj[arr[i]] = i;
+}
+
+console.log(output);
 
 
-// let a = {};
-// let b = a;
-// b.x = 10;
-// console.log(a.x);
 
-setTimeout(() => console.log(333), 1000);
-setTimeout(() => console.log(1), 0);
-Promise.resolve().then(() => console.log(2));
-console.log(3);
+
+
+
+
 
