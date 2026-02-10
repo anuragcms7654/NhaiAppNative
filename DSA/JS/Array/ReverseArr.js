@@ -1,3 +1,4 @@
+
 const arr = [1, 2, 3, 4, 5, 8, 9, 1, 23];
 
 for (let i=0; i<arr.length/2; i++){
