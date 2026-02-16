@@ -1,15 +1,20 @@
-const arr = [1,2,3,4,5,6,-9];
-
-
-let maxi = -Infinity;
-let total = 0;
-for (let i = 0; i<arr.length; i++){
-    total += arr[i];
-    if (total > maxi){
-        maxi = total;
+function LetterChanges(str) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        let ascii = char.charCodeAt(0);
+        
+        // Check if it's a letter and shift it by 1
+        if (char >= 'a' && char <= 'z') {
+            result += char === 'z' ? 'a' : String.fromCharCode(ascii + 1);
+        } else if (char >= 'A' && char <= 'Z') {
+            result += char === 'Z' ? 'A' : String.fromCharCode(ascii + 1);
+        } else {
+            result += char;
+        }
     }
-    if (total < 0){
-        total = 0
-    }
+    return result;
 }
 
+// keep this function call here
+console.log(LetterChanges("anurag"));

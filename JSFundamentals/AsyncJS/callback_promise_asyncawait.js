@@ -2,13 +2,13 @@ function fetchData(callbackFn){
     setTimeout(() => {
         callbackFn();
     }, 1000)
-}
+};
 
 const callbackFn = (c) => {
     console.log(c)
-}
+};
 
-fetchData(() => callbackFn("data"))
+fetchData(() => callbackFn("data"));
 
 // If you give it a non-promise value, JavaScript silently
 //  wraps that value in a resolved promise using:
