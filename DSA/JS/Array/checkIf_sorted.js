@@ -11,4 +11,11 @@ function checkIfSorted() {
   
 }
 
+// console.log(arr.reduce((accumulator, curr)=> {
+//   if (curr < accumulator.prev){
+//       return {sorted: false, prev: curr}
+//   }
+//   return {sorted: accumulator.sorted !== undefined ? accumulator.sorted : true, prev: curr }
+// }, {}).sorted);
+
 checkIfSorted()

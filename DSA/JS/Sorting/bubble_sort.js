@@ -9,7 +9,7 @@ for (let j=arr.length-1; j>0; j--){
         }
     }
     console.log(j);
-    if (isSwap) {
+    if (!isSwap) {
         return;
     };
 };
