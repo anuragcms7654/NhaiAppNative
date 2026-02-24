@@ -30,7 +30,7 @@ C. Hashing  ✅
 * Frequency-based problems
 
 
-D. Linked List
+D. Linked List ✅
 
 * Reverse a linked list
 * Detect loop (Floyd’s cycle)
