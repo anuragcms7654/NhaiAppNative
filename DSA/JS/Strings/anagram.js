@@ -1,30 +1,31 @@
-let str1 = "silent"
-let str2 = "listen"
-const obj = {};
+let str11 = "silent"
+let str22 = "listen"
 const obj2 = {};
 
-function check(){
-    if (str1.length !== str2.length){
-        console.log(false);
-        return;
+function checkAnaGram(str1, str2){
+  const obj = {};
+  if (str1.length !== str2.length){
+    return false;
+  }
+
+  for (let i of str1){
+    obj[i] = obj[i] ? obj[i] += 1 : 1
+  }
+  
+  for (let i of str2){
+    if (i in obj){
+      obj[i] -= 1
+    }else{
+      return false;
     }
-    for (let i of str1){
-        if (i in obj){
-            obj[i] += 1; 
-        }else{
-            obj[i] = 1;
-        }
-    }    
-    for (let i of str2){
-        if (obj[i]){
-            obj[i] -= 1; 
-        } else {
-            console.log(false);
-            return;
-        }
+  }
+
+  for (i in obj){
+    if (obj[i] !== 0){
+      return false;
     }
-    console.log(true);
-    return;
+  }
+  return true
 }
 
-check()
+console.log(checkAnaGram(str11, str22));

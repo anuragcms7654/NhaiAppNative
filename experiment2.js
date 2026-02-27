@@ -1,15 +1,14 @@
-const arr = [3, 6, 2, 7, 9, 12, 0, 23, 3, 67];
+const arr = [12,34,45,67]
 
-
-
-for (let i = 0; i < arr.length; i++) {
-  let indexToSwap = i;
-  for (let j = i; j < arr.length; j++) {
-    if (arr[j] < arr[indexToSwap]){
-      indexToSwap = j;
-    }
-  }
-  [arr[i], arr[indexToSwap]] = [arr[indexToSwap], arr[i]]
+const printSebSets = (i, num, curr) => {
+   if(i >= num.length){
+    console.log(curr);
+    return;
+   }
+   curr.push(num[i]);
+   printSebSets(i+1, num, curr);
+   curr.pop();
+   printSebSets(i+1, num, curr);
 }
 
-console.log(arr);
+printSebSets(0, arr, [])
