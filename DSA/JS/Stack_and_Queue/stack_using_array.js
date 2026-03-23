@@ -1,12 +1,12 @@
 class Stack {
     constructor() {
-      this.arr = []
+      this.arr = [];
     }
     isEmpty(){
        return this.arr.length === 0;
     }
     pushInStack(ele){
-        this.arr.push(ele)
+        this.arr.push(ele);
     }
     popStack(){
         if(this.isEmpty()){

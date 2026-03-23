@@ -6,13 +6,13 @@ const isValidParenthesis = (str) => {
             stack.push(bracket)
         } else {
             if (stack.length === 0){
-                return false
+                return false;
             };
             let ch = stack.pop();
             if ((ch === '(' && bracket === ')') || (ch === '{' && bracket === '}') || (ch === '[' && bracket === ']')){
                 continue;
             } else {
-                return false
+                return false;
             };
         }
     }   

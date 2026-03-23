@@ -1,3 +1,4 @@
+'use strict';
 const array = [2, 4, 6, 7, 8, 11, 18, 19];
 
 const binarySearchFuniterative = (arr, target) => {
@@ -20,19 +21,19 @@ const binarySearchFuniterative = (arr, target) => {
   return -1;
 };
 
-console.log(binarySearchFuniterative(array, 9));
+console.log(binarySearchFuniterative(array, 4));
 
 const binarySearchRecursive = (arr, low, high, target) => {
-  mid = Math.trunc((low + high) / 2);
+  if (low > high) {
+    return -1;
+  }
+  let mid = Math.trunc((low + high) / 2);
   if (arr[mid] === target) {
     return mid;
   } else if (arr[mid] < target) {
     low = mid + 1;
   } else {
     high = mid - 1;
-  }
-  if (low > high) {
-    return -1;
   }
   return binarySearchRecursive(arr, low, high, target);
 };

@@ -29,14 +29,14 @@ const arrr = [3, 6, 2, 7, 9, 12, 0, 23, 3, 67];
 
 const mergeSort = (arr) => {
    if (arr.length <= 1){
-    return arr
-   }
+    return arr;
+   };
    let mid = Math.trunc(arr.length / 2);
    let arr1 = arr.slice(0,mid);
    let arr2 = arr.slice(mid);
    const left = mergeSort(arr1);
    const right = mergeSort(arr2);
-   return mergerSortedArr(left, right)
+   return mergerSortedArr(left, right);
 }
 
 

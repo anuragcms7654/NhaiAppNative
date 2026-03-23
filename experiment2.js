@@ -1,14 +1,39 @@
-const arr = [12,34,45,67]
+const arrayy = [1,7,9,10,11,13,16,19,40,82];
 
-const printSebSets = (i, num, curr) => {
-   if(i >= num.length){
-    console.log(curr);
-    return;
+const binaryIterative = (arr, target) => {
+   let n = arr.length - 1;
+   let low = 0;
+   let high = n - 1;
+   while (low <= high){
+      mid = Math.trunc((low+high)/2);
+      if (arr[mid] === target){
+         return mid;
+      } else if (target < arr[mid]){
+         high = mid-1
+      } else {
+         low = mid + 1
+      }
    }
-   curr.push(num[i]);
-   printSebSets(i+1, num, curr);
-   curr.pop();
-   printSebSets(i+1, num, curr);
+
 }
 
-printSebSets(0, arr, [])
+console.log(binaryIterative(arrayy, 9))
+
+
+const binaryRecursive = (low, high, arr, target) => {
+   if (low > high){
+      return -1
+   }
+   let mid = Math.trunc((low+high)/2);
+   if (arr[mid] === target){
+      return mid;
+   } else if (target < arr[mid]){
+      high = mid-1
+   } else {
+      low = mid + 1
+   }
+
+   return binaryRecursive(low, high, mid, target)
+}
+
+console.log(binaryRecursive(0, arrayy.length-1, arrayy, 11));
