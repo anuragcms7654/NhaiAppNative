@@ -61,3 +61,8 @@ Swap variables using array destructuring
 let a = 1, b = 2;
 [a, b] = [b, a];
 console.log(a, b); // 2 1
+
+# Primitive and non-primitive datatype
+primitive - String, number, boolean, undefined, null, bigint, symbol
+non-primitive - object, array, and function
+

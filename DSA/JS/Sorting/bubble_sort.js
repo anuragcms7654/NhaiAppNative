@@ -8,9 +8,8 @@ for (let j=arr.length-1; j>0; j--){
             isSwap = true
         }
     }
-    console.log(j);
     if (!isSwap) {
-        return;
+        break;
     };
 };
 
