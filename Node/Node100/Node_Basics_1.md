@@ -19,3 +19,13 @@ Use-Cases
 -- Node.js follows an event-driven programming model where everything works around events and callbacks. When a request comes in, it is registered as an event, and Node.js does not wait for it to finish—instead, it moves to the next task. Once the operation is complete, a callback function is executed.
 
 This is managed by the event loop, which keeps listening for events and handles them one by one, allowing Node.js to handle many requests efficiently without blocking.
+
+
+# What is event loop?
+-- Event loop is a continuous loop in Node.js that keeps checking if there is any work to do. 
+-- JavaScript is single-threaded, so without it, every DB call or file read would freeze the entire app. 
+-- So instead of waiting, node sends the work like DB calls, file I/O to the OS or thread pools and the event loop stays free to handle other incoming requests. 
+-- When the OS is done, it notifies Node, and the event loop picks up the callback and executes it.
+
+# What is package.json file?
+-- 

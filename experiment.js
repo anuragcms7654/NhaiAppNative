@@ -1,20 +1,25 @@
-// generate all subsets
-const arr = [1, 2, 3];
-
-const generateAllSubsets = (i, num, curr) => {
-    if (i>=num.length){
-        console.log(curr);
-        return;
+var strStr = function (haystack, needle) {
+    n = haystack.length;
+    m = needle.length;
+    let i = 0;
+    let j = 0;
+    let output = '';
+    while (i < n) {
+        if (haystack[i] === needle[j]) {
+            output += needle[j];
+            j++;
+            console.log(output);
+            if (j === m) {
+                return i - m + 1
+            }
+        } else {
+            console.log(j);
+            output = '';
+            j = 0
+        }
+        i++
     }
-    curr.push(num[i]);
-    generateAllSubsets(i + 1, num, curr);
-    curr.pop();
-    generateAllSubsets(i + 1, num, curr);
-}
+    return -1
+};
 
-generateAllSubsets(0, arr, [])
-
-
-
-
-
+console.log(strStr("mississippi", "issip"))
