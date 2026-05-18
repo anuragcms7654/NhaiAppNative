@@ -1,0 +1,43 @@
+# for node
+
+FROM node:18
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 3000
+CMD ["npm", "start"]
+
+
+# for python
+FROM python:3.11
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+EXPOSE 8000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+#  docker-compose.yml
+
+version: "3.8"
+
+services:
+  node-app:
+    build: ./node-service
+    ports:
+      - "3000:3000"
+
+  fastapi-app:
+    build: ./fastapi-service
+    ports:
+      - "8000:8000"
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"

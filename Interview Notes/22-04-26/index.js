@@ -10,11 +10,9 @@
 // async function fetchData() {
 //   try {
 //     const response = await fetch(api);
-
 //     if (!response.ok) {
 //       throw new Error(`Request failed with status ${response.status}`);
 //     }
-
 //     const data = await response.json();
 //     console.log('API Response:', data);
 //   } catch (error) {
@@ -48,18 +46,16 @@ const arrayy = [
   },
 ];
 
-const output = [];
-const finalOutput = [];
-for (let i of arrayy) {
-  let str = "";
-  console.log(i);
-  for (j in i) {
-    str += j + "" + i[j] + "";
-  }
-  if (!output.includes(str)) {
-    output.push(str);
-    finalOutput.push(i);
-  }
-}
+const seen = new Set();
 
-console.log(finalOutput);
+const unique = arrayy.filter(obj => {
+  const sorted = Object.keys(obj).sort().map(key => `${key}:${obj[key]}`).join('|');
+  if(seen.has(sorted)){
+    return false
+  }
+  seen.add(sorted);
+  return true
+})
+
+console.log(unique);
+

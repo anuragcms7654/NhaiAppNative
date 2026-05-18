@@ -60,6 +60,14 @@ Essence Web Technologies
 4. developed 30+ static websites using html, css, bootstrap and tailwind for local business portfolios
 
 
+# todo tech
+1. redis
+2. RabbitMQ
+3. docker
+4. Microservices
+5. CI-CD
+
+
 
 
 
