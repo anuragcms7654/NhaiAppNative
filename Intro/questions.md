@@ -17,5 +17,3 @@
 # How do you troubleshoot and optimize application performance when issues arises?
 
 # What is your understanding of cloud platforms like AWS, Azure, or GCP, or how have you utilized them in a project
-
-119236418
