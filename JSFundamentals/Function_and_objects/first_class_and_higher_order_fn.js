@@ -2,6 +2,10 @@
 // arguments, returned from functions, and stored like any other value.
 
 
+// higher order fn - if func1 takes func2 as argument or returns func2, then func1 is called higher order function and func2 is called callback function
+// or
+
+
 const greet = function (name) {
   return `Hello ${name}`;
 };

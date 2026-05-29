@@ -22,6 +22,9 @@ process.nextTick(() => {
 
 Promise.resolve().then(() => {
   console.log("3. promise");
+  process.nextTick(() => {
+    console.log("2. nextTick 22");
+  });
 });
 
 setTimeout(() => {
@@ -29,14 +32,14 @@ setTimeout(() => {
 }, 0);
 
 setTimeout(() => {
-    console.log("timer start");
-  
-    Promise.resolve().then(() => {
-      console.log("microtask inside timer");
-    });
-  
-    console.log("timer end");
-  }, 0);
+  console.log("timer start");
+
+  Promise.resolve().then(() => {
+    console.log("microtask inside timer");
+  });
+
+  console.log("timer end");
+}, 0);
 
 fs.readFile(__filename, () => {
   console.log("5. poll (I/O)");
@@ -53,4 +56,3 @@ fs.readFile(__filename, () => {
 setImmediate(() => {
   console.log("8. immediate (outside)");
 });
-

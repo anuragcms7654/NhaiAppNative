@@ -22,6 +22,20 @@ for (let i = n - 1; i >= 0; i--) {
 
 console.log(result);
 
+function productExceptSelf(nums) {
+    let result = [];
+    for (let i of nums) {
+      let product = 1;
+      for (let j of nums) {
+        if (i !== j) product *= j;
+      }
+      result.push(product);
+    }
+    return result;
+  }
+  
+  console.log(productExceptSelf([1, 0, 3, 4])); // [24, 12, 8, 6]
+
 
 
 

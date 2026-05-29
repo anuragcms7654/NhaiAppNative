@@ -10,8 +10,7 @@ const callbackFn = (c) => {
 
 fetchData(() => callbackFn("data"));
 
-// If you give it a non-promise value, JavaScript silently
-//  wraps that value in a resolved promise using:
+// If you give it a non-promise value, JavaScript silently wraps that value in a resolved promise using:
 // Promise.resolve(value)
 // The result of await is simply that value
 

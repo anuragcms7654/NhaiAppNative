@@ -1,4 +1,4 @@
-// microtask has higher priority than macrotask (after rpocess.nextTick)
+// microtask has higher priority than macrotask (after process.nextTick)
 
 // Microtask queue (urgent, immediate follow-up work) Contains:
 // -- Promise.then / catch / finally

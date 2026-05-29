@@ -1,14 +1,16 @@
-function add(a) {
-  return function (b) {
-    return function (c) {
-      return a + b + c;
-    };
-  };
-}
-add(1)(2)(3); // 6
+// definition - Currying = converting a function with multiple arguments into a sequence of functions each taking one (or few) arguments
+
+// function addd(a) {
+//   return function (b) {
+//     return function (c) {
+//       return a + b + c;
+//     };
+//   };
+// }
+// console.log(addd(1)(2)(3)); // 6
 
 // const addArrow = (a) => (b) => (c) => a + b + c;
-// addArrow(1)(2)(3); // 6
+// console.log(addArrow(1)(2)(3)); // 6
 
 // // Currying using Closures (manual)
 // function multiply(a) {
@@ -34,6 +36,9 @@ add(1)(2)(3); // 6
 
 function curry(fn) {
   return function curried(...args) {
+    console.log("args", args);
+    console.log("fn", fn.length);
+
     if (args.length >= fn.length) {
       return fn(...args);
     }
@@ -47,5 +52,5 @@ function add(a, b, c) {
 
 const curriedAdd = curry(add);
 
-curriedAdd(1)(2)(3); // 6
+console.log(curriedAdd(1)(2)(3)); // 6
 curriedAdd(1, 2)(3); // 6
