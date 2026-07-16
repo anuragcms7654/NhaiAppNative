@@ -1,7 +1,7 @@
 class Node {
-   constructor(data) {
-      this.value = data;
-      this.next = null;
+   constructor(value) {
+      this.value = value;
+      this.next = null
    }
 }
 
@@ -20,7 +20,7 @@ class SinglyLinkedList {
          while (curr.next !== null) {
             curr = curr.next;
          }
-         curr.next = newNode;
+         curr.next = newNode
       }
    }
 
@@ -43,6 +43,10 @@ class SinglyLinkedList {
 let list = new SinglyLinkedList();
 
 list.append(10)
-list.append(20);
+list.append(20)
+list.append(30)
+list.append(40)
+list.append(50)
+list.append(60)
 
 list.print()

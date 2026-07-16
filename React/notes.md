@@ -8,3 +8,13 @@ In short, it lets developers write modern code without worrying about browser co
 It also handles dependencies and improves performance by reducing file size.
 In simple terms, it prepares your React app so it runs fast in the browser.
 
+# when to use useLayoutEffect? 
+-- when we want to paint the browser on some logic/condition. as it blocks the rendering. so useEffect is mazorly used as it dont blocks the UI, 
+
+examples useCase - 
+--- Measuring DOM size/position (tooltips, modals)
+--- Preventing layout flicker/jumps (accordions, animations)
+--- Controlling scroll position (chat auto-scroll)
+--- Reading layout → updating state (responsive UI based on width/height)
+--- Integrating with DOM-heavy libraries (D3, charts)
+

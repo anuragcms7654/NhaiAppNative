@@ -1,0 +1,5 @@
+ok.. Myself Anurag, i belongs to bihar. completed my bachelors in 2022. i started working as a software developer in feb 2023. in my first organization i worked as a frontend developer working with react.js and a samll exposure of node js with mongo db for a crm application for packers and movers all over the india. i also worked on python for web scraping.
+In my second company, that is the techtonic, i worked as a full stack developer with react js, node js and a small dashboard project with python - fastAPI, for the clients DABUR and ITC limited and also worked on an ecommerce ONDC platform. 
+after that in my current organization, i smoothly transitioned to mobile full stack development witb react native and node js where i worked on government infrastructure project handling project setup and making global handlers for the project along with auth, RBAC, payment gateways, AWS S3 uploads and many more.
+i made a rag based chatbot with fast APi and react js and offline model llama 3-8b trained on government docs.
+i also made my own project with FAST API and react js integrating LLM and RAG system along with session and history management. 
