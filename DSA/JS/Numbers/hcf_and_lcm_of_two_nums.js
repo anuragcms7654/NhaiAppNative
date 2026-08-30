@@ -1,0 +1,1 @@
+// Classic Euclidean algorithm question, often extended to LCM using (a*b)/gcd(a,b).

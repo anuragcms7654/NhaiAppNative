@@ -1,0 +1,1 @@
+// Uses sum formula n(n+1)/2 or XOR trick — extremely common in arrays + numbers hybrid questions.

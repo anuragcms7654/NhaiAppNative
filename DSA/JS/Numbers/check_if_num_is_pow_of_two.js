@@ -1,0 +1,1 @@
+// Solved elegantly using the trick: n > 0 && (n & (n-1)) == 0.
