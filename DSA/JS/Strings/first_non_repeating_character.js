@@ -1,9 +1,18 @@
 const first = 'loveleetcode';
 const obj = {}
-for (let i of first){
-   obj[i] = (i in obj) ? (obj[i] + 1) : 0;
+
+
+for (let i of first) {
+   if (i in obj) {
+      obj[i] += 1;
+   } else {
+      obj[i] = 1
+   }
 }
-console.log(obj);
 
-
-console.log(Object.keys(obj)?.find(x => obj[x] === 0));
+for (j in obj) {
+   if (obj[j] === 1) {
+      console.log(j);
+      break;
+   }
+}

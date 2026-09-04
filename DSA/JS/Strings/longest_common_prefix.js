@@ -1,20 +1,22 @@
-const arr = ["fliwer", "fliow", "flight"];
+// longest SUBSTRING WITHOUT REPEATING CHARACTERS
 
+const arr = ["flieer", "flieow", "flieght"];
+
+let firstWord = arr[0];
 let i = 0;
-let x = true;
-let prefix = "";
-while (i < arr[0].length && x) {
-  let atFirst = arr[0][i];
-  for (let j = 0; j < arr.length; j++) {
-    if (arr[j][i] !== atFirst){
-        x = false;
-        break;
-    }
-  }
-  if (x){
-    prefix += atFirst;
-    i++;
-  }
-}
+let prefix = ''
+let check = true
 
+while (i < firstWord.length) {
+   for (let j of arr) {
+      if (j[i] !== firstWord[i]) {
+         check = false
+         break;
+      }
+   }
+   if (check) {
+      prefix += firstWord[i];
+   }
+   i++;
+}
 console.log(prefix);
