@@ -32,4 +32,4 @@ function insertInterval(intervals, newInterval) {
 }
 
 
-console.log(insertInterval(inputs, target));
+console.log(insertInterval(inputs, targets));
