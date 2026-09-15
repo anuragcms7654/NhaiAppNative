@@ -1,7 +1,7 @@
 1. hi, good morning, How’s your day going?
 
 2. what is your reason for job change?
--- I’ve learned a lot in my current role over the last 1.5 years, but the work has become somewhat repetitive. I’m looking for new challenges where I can grow technically and work on more complex projects as a Full Stack Engineer, and also eager to work with different domain like AI or devops if possible.
+-- so, here i am working as a mobile full stack developer. i worked on 2 mazor project, for 1 year I worked on a very large scale project and i learned a lot from that in different aspects. then i was moved to another project, where that was developed in only 4-5 months, and after that only the maintainance work is there, so work becomes so repititive, and its like i was in my comfort zone.. and i dont want to be in that specially at this point of my age or career. also i have added few more tech stack in my skill on my own and that is not aligning with the current role.. so these are few reasons for my switch
 
 3. what is your current CTC and expected?
 My current CTC is 6 LPA. Based on my 3+ years of experience in Full-Stack and Mobile Development and the skills I bring, I’m expecting something in the range of 9 to 12 LPA LPA, but I’m open to discussion depending on the role, responsibilities, and overall opportunity.

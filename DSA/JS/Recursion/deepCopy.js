@@ -12,7 +12,7 @@ console.log(structuredClone(obj));
 // method 3 - recursion
 
 function deepCopyRec(obj) {
-  if (obj === null || typeof obj !== obj) {
+  if (obj === null || typeof obj !== Object) {
     return obj;
   }
   const copy = Array.isArray(obj) ? [] : {};

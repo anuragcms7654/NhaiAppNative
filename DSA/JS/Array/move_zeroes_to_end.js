@@ -8,6 +8,8 @@ while (i < arr.length) {
   }
   i++;
 }
+console.log(i);
+
 
 if (i === arr.length) {
   return;

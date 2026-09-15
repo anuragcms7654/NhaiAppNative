@@ -1,0 +1,1 @@
+// segregate odd and even nodes in LL

@@ -1,29 +1,10 @@
-// reverse array
-
-const reverseArr = (array) => {
-   const lengths = array.length
-   for (let i = 0; i < lengths / 2; i++) {
-      [array[i], array[lengths - 1 - i]] = [array[lengths - 1 - i], array[i]]
+const arr = [10, 1, 5, 9, 2, 11, 14];
+for (let i = 0; i < arr.length; i++) {
+   let key = arr[1];
+   let j = 1 - 1;
+   while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j--;
    }
-   return array;
+   arr[j + 1] = key
 }
-
-const reverseArrayLeftByK = (arr, k) => {
-   const wholerev = reverseArr(arr);
-   const firstk = reverseArr(wholerev.slice(0, k))
-   const lastk = reverseArr(wholerev.slice(k))
-   const newArr = [...firstk, ...lastk]
-   return newArr
-}
-
-const reverseArrayRightByK = (arr, k) => {
-   // const wholerev = reverseArr(arr);
-   const firstk = reverseArr(arr.slice(0, k))
-   const lastk = reverseArr(arr.slice(k))
-   const newArr = reverseArr([...firstk, ...lastk])
-   return newArr
-}
-
-const array = [12, 3, 45, 6, 7, 43, 23];
-console.log(reverseArrayRightByK(array, 2));
-// reverseArrayLeftByK(array, 2)
